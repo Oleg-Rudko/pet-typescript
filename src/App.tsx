@@ -1,8 +1,19 @@
 import React from "react";
+import firebase from "firebase/app";
 import "./App.scss";
 
-function App() {
-  return <div className="App">Hello</div>;
-}
+const App = () => {
+  return (
+    <div className="App">
+      <button
+        onClick={() => {
+          firebase.auth().signOut();
+        }}
+      >
+        Sign Out
+      </button>
+    </div>
+  );
+};
 
 export default App;
